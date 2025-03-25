@@ -31,8 +31,13 @@
 
 ## 🚩프로젝트별 Architecture
 
-![image](https://github.com/user-attachments/assets/673e991f-4ceb-4efa-af7d-9108bdd572fa)
-![image](https://github.com/user-attachments/assets/7cb26f0d-7350-4755-b7df-dc41303a8f29)
+| **1단계** |
+|--------|
+| <img src="https://github.com/user-attachments/assets/673e991f-4ceb-4efa-af7d-9108bdd572fa" width="700" /> |
+
+| **2단계** |
+|--------|
+| <img src="https://github.com/user-attachments/assets/7cb26f0d-7350-4755-b7df-dc41303a8f29" width="600" /> |
 
 
 ## **🛠 프로젝트 수행 과정**
