@@ -49,7 +49,7 @@
     2. GitHub 리포지토리 설정 > Webhook 설정 값 입력 
     3. Jenkins에서 GitHub Webhook 플러그인 설치
 
-![image](https://github.com/user-attachments/assets/39c4e082-604d-4829-a617-668889ba1ce8)
+    <img src="https://github.com/user-attachments/assets/39c4e082-604d-4829-a617-668889ba1ce8" width="700" />
 
 *🎆 **Webhook**이란?* 
 
@@ -151,13 +151,16 @@ pipeline {
 ✅ **Bridge로 연결**
 
 1. Bridge로 연결 <br>
-  ![image](https://github.com/user-attachments/assets/8c2af9d2-f0db-4f21-a066-f77b7ac07697)
+   <img src="https://github.com/user-attachments/assets/8c2af9d2-f0db-4f21-a066-f77b7ac07697" width="700" />
+
 
 2. 연결후 ip 확인 <br>
-   ![image](https://github.com/user-attachments/assets/8e4fdf06-a741-49c3-aa88-bc1627f46362)
+   <img src="https://github.com/user-attachments/assets/8e4fdf06-a741-49c3-aa88-bc1627f46362" width="700" />
+
 
 3. SSH RSA 키 추가해서 원격 서버에 비밀번호 없이 접속할 수 있도록 설정 <br>
-  ![image](https://github.com/user-attachments/assets/7721ac4e-075e-4580-9cb1-b3d952aa59f9)
+   <img src="https://github.com/user-attachments/assets/7721ac4e-075e-4580-9cb1-b3d952aa59f9" width="700" />
+
 
     <details>
       <summary>A 컴퓨터 → B 컴퓨터 Ubuntu에 jar 파일 전송하는 groovy 코드</summary>
@@ -241,7 +244,7 @@ pipeline {
 
 
 
-4. jar 파일 복사 여부 확인
+6. jar 파일 복사 여부 확인
    
 ```groovy
   ls -l /home/ubuntu/myapp.jar
@@ -260,12 +263,15 @@ pipeline {
 1. 포트 포워딩 추가
     
     A 컴퓨터에서 B컴퓨터(192.168.0.157)의 22번 포트와 연결 (30000번 포트)
-    ![image](https://github.com/user-attachments/assets/6e272d17-38b3-4707-948f-2a8eb8aa4498)
-    ![image](https://github.com/user-attachments/assets/a24dcb53-f524-4ca8-9a68-8c258f6f4713)
+   
+   <img src="https://github.com/user-attachments/assets/6e272d17-38b3-4707-948f-2a8eb8aa4498" width="700" />
+   <img src="https://github.com/user-attachments/assets/a24dcb53-f524-4ca8-9a68-8c258f6f4713" width="700" />
 
-2. SSH RSA 키 추가해서 원격 서버에 비밀번호 없이 접속할 수 있도록 설정
-    ![image](https://github.com/user-attachments/assets/0cf287df-fb06-4340-b8d6-0d84438ce996)
-    ![image](https://github.com/user-attachments/assets/29e0ffec-2fad-4217-b903-bd3555482b27)
+3. SSH RSA 키 추가해서 원격 서버에 비밀번호 없이 접속할 수 있도록 설정
+   
+   <img src="https://github.com/user-attachments/assets/0cf287df-fb06-4340-b8d6-0d84438ce996" width="700" />
+   <img src="https://github.com/user-attachments/assets/29e0ffec-2fad-4217-b903-bd3555482b27" width="700" />
+
 
 
 <details>
@@ -363,22 +369,28 @@ pipeline {
         
 #### VMWare에서 외부 네트워크로 연결이 되지 않는 문제
 
-**◼️기기 환경 사양**
-- OS : Ubuntu 24.02
-- Virtual Machine : VMWare Workstation Pro 17
+**◼️기기 환경 사양** <br>
+
+| 항목            | 사양                         |
+|-----------------|------------------------------|
+| OS              | Ubuntu 24.02                 |
+| Virtual Machine | VMware Workstation Pro 17    |
+
 
 - 문제 상황
     - 내부 네트워크에서만 통신이 가능하여, Ubuntu Package 업데이트가 불가능하였다.
     - `ping 8.8.8.8` 을 날렸을 때 *unreachable 오류가 발생*했다.
-      ![image](https://github.com/user-attachments/assets/ec2db2b8-2fc6-430f-a6f8-942314ce40b1)
+      
+      <img src="https://github.com/user-attachments/assets/ec2db2b8-2fc6-430f-a6f8-942314ce40b1" width="700" />
 
 
 - 해결 방법
     1. `/etc/netplan/01-netcfg.yaml` 파일 수정해서 기본 게이트웨이 주소 변경해주기 <br>
         → 게이트웨이가 고정 IP의 네트워크에 포함된 IP여야 함
 
-    ![image](https://github.com/user-attachments/assets/bf376c91-17e7-47c9-a74a-5bc4ef3b5b2f)
-    ![image](https://github.com/user-attachments/assets/31aee626-424c-442d-a1ed-ebb120104876)
+  <img src="https://github.com/user-attachments/assets/bf376c91-17e7-47c9-a74a-5bc4ef3b5b2f" width="700" />
+  <img src="https://github.com/user-attachments/assets/31aee626-424c-442d-a1ed-ebb120104876" width="700" />
+  
 
 
     2. network netplan을 적용시키기
@@ -389,8 +401,9 @@ pipeline {
     ```
 
     3. ip route 현황 확인, ping으로 8.8.8.8 외부 통신 확인
-       ![image](https://github.com/user-attachments/assets/1b6e5f54-726a-418c-be93-57c7f016ae2b)
-       ![image](https://github.com/user-attachments/assets/377d2219-3907-492a-a88d-fb87e695fd1b)
+       
+       <img src="https://github.com/user-attachments/assets/1b6e5f54-726a-418c-be93-57c7f016ae2b" width="700" />
+       <img src="https://github.com/user-attachments/assets/377d2219-3907-492a-a88d-fb87e695fd1b" width="700" />
 
 
 
